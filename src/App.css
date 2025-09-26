@@ -1,0 +1,347 @@
+body { 
+  font-family: "Inter", Arial, sans-serif; 
+  background:#f5f7fa; 
+  color:#2d3748;
+  margin: 0;
+  padding: 0; 
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #242323, #1a1a1a);
+  color: #e0e0e0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal */
+.app h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #00bcd4; /* azul tecnológico */
+  text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.5);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Subtítulos */
+.app h2 {
+  margin: 30px 0 15px;
+  font-size: 1.5rem;
+  color: #90caf9;
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 5px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: left;
+}
+
+/* Wrapper para centralizar todos os cards */
+.app > * {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 25px;
+}
+
+/* ==== GRID do Dashboard ==== */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 25px;
+}
+
+/* Cards do grid */
+.dashboard > * {
+  background: #121212;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Cards fora do grid (Form e Lista) */
+.app > *:not(.dashboard):not(h1):not(h2) {
+  background: #121212;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.tx-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  background: #121212;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  max-width: 1000px;
+  margin: 0 auto 24px auto;
+  color: #e0e0e0;
+}
+
+.tx-form input,
+.tx-form select {
+  background: #1e1e1e;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tx-form input::placeholder {
+  color: #757575;
+}
+
+.tx-form input:focus,
+.tx-form select:focus {
+  border: 1px solid #00bcd4;
+  box-shadow: 0 0 6px rgba(0, 188, 212, 0.6);
+}
+
+.tx-form button {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tx-form button:hover {
+  background: #0097a7;
+  transform: translateY(-2px);
+}
+
+.tx-form button:active {
+  background: #007c91;
+  transform: translateY(0);
+}
+
+.tx-list {
+  margin-top: 24px;
+  background: #121212;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+  overflow-x: auto;
+}
+
+.tx-list table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.tx-list thead {
+  background: #1e1e1e;
+}
+
+.tx-list th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: bold;
+  color: #00bcd4;
+  border-bottom: 2px solid #2c2c2c;
+}
+
+.tx-list td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.tx-list tr:nth-child(even) {
+  background: #1a1a1a;
+}
+
+.tx-list tr:hover {
+  background: #222831;
+  transition: background 0.2s ease;
+}
+
+.tx-list td button {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tx-list td button:hover {
+  background: #e53935;
+  transform: translateY(-2px);
+}
+
+.tx-list td button:active {
+  background: #c62828;
+  transform: translateY(0);
+}
+
+.summary { 
+  background: #121212; /* fundo escuro principal */
+  padding: 24px;
+  max-width: 300px;
+  margin-left: -25px;
+  margin-right: -100px;
+  border-radius: 12px;
+  color: #e0e0e0;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.summary h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #00bcd4; /* azul ciano tecnológico */
+  border-bottom: 1px solid #2c2c2c;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.summary-card {
+  background: #1e1e1e;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.summary-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #b0bec5; /* cinza sofisticado */
+}
+
+.summary-card p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.charts { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 15px;
+  max-width: 4000px;
+  margin-right: -20px;
+  margin-left: -100px;
+  background: #121212; /* fundo escuro */
+  color: #e0e0e0; /* texto em cinza claro */
+  border-radius: 12px;
+}
+
+.charts .charts-item {
+  background: #1e1e1e; /* card escuro */
+  padding: auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chart-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.chart-item h4 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  justify-self: center;
+  color: #00bcd4; /* destaque tecnológico (ciano) */
+  border-bottom: 1px solid #2c2c2c;
+  padding-bottom: 8px;
+}
+
+@media(max-width:900px) { 
+  .charts { 
+    grid-template-columns:1fr; 
+  }
+  .summary {
+    flex-direction: column;
+  }
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .app h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .app h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+  }
+
+  .app > * {
+    padding: 15px;
+  }
+  .tx-list table {
+    font-size: 0.85rem;
+  }
+  .tx-list th,
+  .tx-list td {
+    padding: 8px 10px;
+  }
+  .tx-list td button {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+  }
+  .summary {
+    padding: 16px;
+  }
+  .summary h2 {
+    font-size: 1.2rem;
+  }
+  .summary-card {
+    padding: 12px;
+  }
+  .summary-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tx-form {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .tx-form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
