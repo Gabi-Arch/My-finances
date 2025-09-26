@@ -26,8 +26,6 @@ Fullstack application for controlling **financial transactions**, with an **inte
 ## 📂 Folder Structure
 /backend
 
-├── node_modules/ # Sequelize Settings
-
 ├── db.js # API Routes (transactions, summary)
 
 ├── server.js # Express Server
@@ -58,9 +56,7 @@ Fullstack application for controlling **financial transactions**, with an **inte
 
 │ ├── init.sql #Table to run in the database
 
-│ └── App.css # Global style
-
-└── settings.json
+└── App.css # Global style
 
 ---
 
